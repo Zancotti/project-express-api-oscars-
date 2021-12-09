@@ -226,16 +226,11 @@ const Container = styled.section`
 
 const ItemContainer = styled.div`
   background-color: white;
-  width: 250px;
+  width: 300px;
   height: 220px;
   text-align: center;
   border-bottom: 3px solid #b2ded6;
   box-shadow: 0 3px 10px rgb(0 0 0 /20%);
-
-  @media (min-width: 668px) and (max-width: 1024px) {
-    width: 300px;
-    height: 300px;
-  }
 
   @media (max-width: 667px) {
     width: 300px;
