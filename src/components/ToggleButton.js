@@ -21,4 +21,10 @@ const ToggleBtn = styled.button`
   &:hover {
     background-color: ${(props) => (props.isSelected ? "#b2ded6" : "#d7d7d7")};
   }
+
+  @media (max-width: 667px) {
+    padding: 8px;
+    font-size: 12px;
+    letter-spacing: 0px;
+  }
 `;

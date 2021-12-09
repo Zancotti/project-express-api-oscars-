@@ -143,7 +143,7 @@ export const NominatedList = () => {
                     <CeremonyYear>{item.yearCeremony}</CeremonyYear>
                   </ResultYearContainer>
                   <Film>{item.film}</Film>
-                  <Name>{item.name}</Name>
+                  <span>{item.name}</span>
                 </InformationContainer>
               </ItemContainer>
             );
@@ -199,6 +199,12 @@ const Button = styled.button`
   &:hover {
     background-color: #d7d7d7;
   }
+
+  @media (max-width: 667px) {
+    padding: 8px;
+    font-size: 12px;
+    letter-spacing: 0px;
+  }
 `;
 
 const Container = styled.section`
@@ -207,6 +213,7 @@ const Container = styled.section`
   justify-content: space-between;
   gap: 10px;
   margin: 0 80px 80px 80px;
+
   @media (min-width: 668px) and (max-width: 1024px) {
     margin: 0 40px 40px 40px;
   }
@@ -219,11 +226,21 @@ const Container = styled.section`
 
 const ItemContainer = styled.div`
   background-color: white;
-  width: 200px;
-  height: 180px;
+  width: 250px;
+  height: 220px;
   text-align: center;
   border-bottom: 3px solid #b2ded6;
   box-shadow: 0 3px 10px rgb(0 0 0 /20%);
+
+  @media (min-width: 668px) and (max-width: 1024px) {
+    width: 300px;
+    height: 300px;
+  }
+
+  @media (max-width: 667px) {
+    width: 300px;
+    height: 200px;
+  }
 `;
 
 const Category = styled.div`
@@ -257,6 +274,7 @@ const ResultYearContainer = styled.div`
   display: flex;
   justify-content: space-between;
   padding: 10px 20px 0 20px;
+  padding: 8px 4px;
 `;
 
 const CeremonyYear = styled.span`
@@ -271,10 +289,10 @@ const InformationContainer = styled.div`
   height: 150px;
   display: flex;
   flex-direction: column;
+  padding: 0 4px;
 `;
 
 const Film = styled.span`
   font-weight: 700;
   padding: 10px 0 0 0;
 `;
-const Name = styled.span``;

@@ -12,4 +12,5 @@ export const Main = () => {
 
 const MainContainer = styled.main`
   width: 100%;
+  min-width: 320px;
 `;
